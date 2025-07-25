@@ -69,14 +69,14 @@ body {
     border: 1px solid #ff8928; 
 }
 .config-option button.active{
-      color: #ff8928;
+      /*color: #ff8928;*/
       border-color: #ff8928;
       background: #f7f28d ;
 }
 .config-option button:hover,
 .quiz-content .answer-option:hover
 {
-    background-color: #ff8928;
+    background-color: #f7f28d ;
 }
 .question-options button {
     flex: 1 1 10%; 
@@ -126,15 +126,16 @@ body {
 
 .quiz-header .quiz-timer{
     display: flex;
-    width: 70px;
-    background: #fae52a; 
+    width: 70px; 
     color: #fff;
+    display: flex;
     align-items: center;
     gap: 5px;
     font-weight: 600;
     padding: 7px 9px;
     border-radius: 6px;
-    transition: 0.3 ease;
+    background: #ffde22;
+    transition: 0.3s ease;
     
 }
 

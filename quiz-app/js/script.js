@@ -41,11 +41,11 @@ const startTimer = () => {
            clearInterval(timer);
            highlightCorrectAnswer();
            nextQuestionBtn.style.visibility = "visible"; 
-           quizContainer.querySelector(".quiz-timer").style.background = "#c31402"
+           quizContainer.querySelector(".quiz-timer").style.background = "#cc0000";
 
            answerOptions.querySelectorAll(".answer-option").forEach(option => option.style.pointerEvents = "none");
         }
-    },1000)
+    },1000);
 }
 
 
@@ -91,9 +91,8 @@ const handleAnswer = (option, answerIndex) => {
 
 // Render the current question and its options in the quiz
 const renderQuestion = () => {
-     currentQuestion = getRandomQuestion();
+    currentQuestion = getRandomQuestion();
     if(!currentQuestion) return;
-    console.log(currentQuestion);
 
     resetTimer();
     startTimer();
@@ -102,8 +101,9 @@ const renderQuestion = () => {
     // update the UI 
     answerOptions.innerHTML = "";
     nextQuestionBtn.style.visibility = "hidden";
+    quizContainer.querySelector(".quiz-timer").style.background = "#ffde22"
     document.querySelector(".question-text").textContent = currentQuestion.question;
-    questionStatus.innerHTML = `<b>${questionIndexHistory.length}</b> of<b> ${numberOfQuestions}</b>Questions`
+    questionStatus.innerHTML = `<b>${questionIndexHistory.length}</b> of<b> ${numberOfQuestions}</b>Questions`;
 
     //create option <li> elements and append them and add click event listeners
     currentQuestion.options.forEach((option, index) => {
